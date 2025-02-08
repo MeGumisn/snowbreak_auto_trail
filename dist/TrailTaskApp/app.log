@@ -1,0 +1,135 @@
+2025-02-09 01:03:22,289 [INFO] Back to home
+2025-02-09 01:03:26,549 [INFO] Found template at (204, 108)
+2025-02-09 01:03:26,549 [INFO] Click until found HOME_PAGE
+2025-02-09 01:03:26,566 [INFO] Found template at (204, 108)
+2025-02-09 01:03:26,566 [INFO] Click at client 1704, 508
+2025-02-09 01:03:26,567 [INFO] Click mouse at 2196, 980
+2025-02-09 01:03:27,644 [INFO] Found template at (204, 108)
+2025-02-09 01:03:27,644 [INFO] Click at client 1704, 508
+2025-02-09 01:03:27,644 [INFO] Click mouse at 2196, 980
+2025-02-09 01:03:28,723 [INFO] Click until found MAZE_BUTTON
+2025-02-09 01:03:28,739 [INFO] Found template at (186, 68)
+2025-02-09 01:03:28,739 [INFO] Click at client 1636, 298
+2025-02-09 01:03:28,740 [INFO] Click mouse at 2128, 770
+2025-02-09 01:03:29,823 [INFO] Click until found BATTLE_GROUND
+2025-02-09 01:03:29,827 [INFO] Found template at (136, 49)
+2025-02-09 01:03:29,827 [INFO] Click at client 146, 189
+2025-02-09 01:03:29,827 [INFO] Click mouse at 638, 661
+2025-02-09 01:03:30,904 [INFO] Click until found TRAIL_BUTTON
+2025-02-09 01:03:30,918 [INFO] Found template at (232, 119)
+2025-02-09 01:03:30,918 [INFO] Click at client 1747, 1029
+2025-02-09 01:03:30,918 [INFO] Click mouse at 2239, 1501
+2025-02-09 01:03:31,976 [INFO] Setup finished
+2025-02-09 01:03:31,977 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:03:32,000 [INFO] Found template at (160, 49)
+2025-02-09 01:03:32,000 [INFO] Click at client 1540, 324
+2025-02-09 01:03:32,000 [INFO] Click mouse at 2032, 796
+2025-02-09 01:03:33,055 [INFO] Click until found START_BUTTON
+2025-02-09 01:03:33,072 [INFO] Found template at (205, 66)
+2025-02-09 01:03:33,072 [INFO] Click at client 1805, 1041
+2025-02-09 01:03:33,072 [INFO] Click mouse at 2297, 1513
+2025-02-09 01:03:47,582 [INFO] Found template at (209, 66)
+2025-02-09 01:03:47,618 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:03:48,664 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:03:55,212 [INFO] Found template at (209, 80)
+2025-02-09 01:03:55,247 [INFO] Click mouse at 1451, 1032
+2025-02-09 01:03:56,307 [INFO] Click mouse at 1451, 1532
+2025-02-09 01:04:04,018 [INFO] Found template at (209, 66)
+2025-02-09 01:04:04,052 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:04:05,110 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:04:11,637 [INFO] Found template at (209, 66)
+2025-02-09 01:04:11,672 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:04:12,743 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:04:21,461 [INFO] Found template at (209, 66)
+2025-02-09 01:04:21,496 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:04:22,557 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:04:31,239 [INFO] Found template at (209, 66)
+2025-02-09 01:04:31,274 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:04:32,345 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:04:41,041 [INFO] Found template at (209, 66)
+2025-02-09 01:04:41,075 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:04:42,138 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:04:52,940 [INFO] Found template at (209, 66)
+2025-02-09 01:04:52,976 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:04:54,028 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:04:55,101 [INFO] Found template at (241, 259)
+2025-02-09 01:04:55,101 [INFO] Click mouse at 1903, 1006
+2025-02-09 01:04:55,667 [INFO] Click until found 
+2025-02-09 01:04:55,670 [INFO] Found template at (168, 49)
+2025-02-09 01:04:55,670 [INFO] Click at client 1568, 1034
+2025-02-09 01:04:55,670 [INFO] Click mouse at 2060, 1506
+2025-02-09 01:05:05,483 [INFO] Found template at (209, 66)
+2025-02-09 01:05:05,519 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:05:06,577 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:05:22,862 [INFO] Found template at (152, 53)
+2025-02-09 01:05:22,896 [INFO] Found template at (152, 53)
+2025-02-09 01:05:22,896 [INFO] Click until found QUIT_BUTTON
+2025-02-09 01:05:22,934 [INFO] Found template at (152, 53)
+2025-02-09 01:05:22,934 [INFO] Click at client 942, 1023
+2025-02-09 01:05:22,935 [INFO] Click mouse at 1434, 1495
+2025-02-09 01:05:24,000 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:05:25,018 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:05:26,020 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:05:27,022 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:05:28,034 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:05:28,037 [INFO] Found template at (160, 49)
+2025-02-09 01:05:28,037 [INFO] Click at client 1540, 324
+2025-02-09 01:05:28,037 [INFO] Click mouse at 2032, 796
+2025-02-09 01:05:29,084 [INFO] Click until found START_BUTTON
+2025-02-09 01:05:29,094 [INFO] Found template at (205, 66)
+2025-02-09 01:05:29,094 [INFO] Click at client 1805, 1041
+2025-02-09 01:05:29,094 [INFO] Click mouse at 2297, 1513
+2025-02-09 01:05:43,518 [INFO] Found template at (209, 66)
+2025-02-09 01:05:43,545 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:05:44,617 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:05:51,168 [INFO] Found template at (209, 66)
+2025-02-09 01:05:51,204 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:05:52,246 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:05:59,867 [INFO] Found template at (209, 66)
+2025-02-09 01:05:59,902 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:06:00,958 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:06:07,512 [INFO] Found template at (209, 66)
+2025-02-09 01:06:07,546 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:06:08,621 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:06:18,394 [INFO] Found template at (209, 66)
+2025-02-09 01:06:18,429 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:06:19,487 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:06:28,136 [INFO] Found template at (209, 66)
+2025-02-09 01:06:28,170 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:06:29,216 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:06:38,982 [INFO] Found template at (209, 66)
+2025-02-09 01:06:39,016 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:06:40,086 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:06:54,129 [INFO] Found template at (209, 76)
+2025-02-09 01:06:54,162 [INFO] Click mouse at 1451, 1028
+2025-02-09 01:06:55,228 [INFO] Click mouse at 1451, 1528
+2025-02-09 01:06:56,315 [INFO] Found template at (241, 259)
+2025-02-09 01:06:56,315 [INFO] Click mouse at 1903, 1006
+2025-02-09 01:06:56,876 [INFO] Click until found 
+2025-02-09 01:06:56,909 [INFO] Found template at (168, 49)
+2025-02-09 01:06:56,909 [INFO] Click at client 1568, 1034
+2025-02-09 01:06:56,909 [INFO] Click mouse at 2060, 1506
+2025-02-09 01:07:06,657 [INFO] Found template at (209, 93)
+2025-02-09 01:07:06,692 [INFO] Click mouse at 1451, 1045
+2025-02-09 01:07:07,741 [INFO] Click mouse at 1451, 1545
+2025-02-09 01:07:08,893 [INFO] Found template at (209, 66)
+2025-02-09 01:07:08,894 [INFO] Click mouse at 1451, 1018
+2025-02-09 01:07:09,945 [INFO] Click mouse at 1451, 1518
+2025-02-09 01:07:31,585 [INFO] Found template at (152, 53)
+2025-02-09 01:07:31,618 [INFO] Found template at (152, 53)
+2025-02-09 01:07:31,618 [INFO] Click until found QUIT_BUTTON
+2025-02-09 01:07:31,634 [INFO] Found template at (152, 53)
+2025-02-09 01:07:31,635 [INFO] Click at client 942, 1023
+2025-02-09 01:07:31,635 [INFO] Click mouse at 1434, 1495
+2025-02-09 01:07:32,704 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:07:33,750 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:07:34,755 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:07:35,759 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:07:36,772 [INFO] Click until found EXTREME_TRAIL
+2025-02-09 01:07:36,773 [INFO] Found template at (160, 49)
+2025-02-09 01:07:36,773 [INFO] Click at client 1540, 324
+2025-02-09 01:07:36,773 [INFO] Click mouse at 2032, 796
+2025-02-09 01:07:37,831 [INFO] Click until found START_BUTTON
+2025-02-09 01:07:37,843 [INFO] Found template at (205, 66)
+2025-02-09 01:07:37,843 [INFO] Click at client 1805, 1041
+2025-02-09 01:07:37,843 [INFO] Click mouse at 2297, 1513
