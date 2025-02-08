@@ -74,6 +74,10 @@ class TrailTaskApp:
                     return
                 if time.time() - start_time > timeout:
                     raise TimeoutError("Failed to find the target image within the timeout period.")
+                if not WindowUtil.is_scroll_lock_on():
+                    break
+            if not WindowUtil.is_scroll_lock_on():
+                break
             sleep(1)
 
     def back_to_home(self):
@@ -84,10 +88,11 @@ class TrailTaskApp:
             KeyboardUtil.press_key(self.hwnd, win32con.VK_ESCAPE)
             sleep(1)
             center_point = self.get_image_position(Setting.HOME_PAGE, ImageTemplates.HOME_PAGE)
-        return self.center_to_client_pos(center_point, Setting.HOME_PAGE)
 
     def setup(self):
         self.back_to_home()
+        if not WindowUtil.is_scroll_lock_on():
+            return
         # 点击主页面上的“战斗”按钮
         self.click_until_found(Setting.HOME_PAGE, ImageTemplates.HOME_PAGE, "HOME_PAGE")
         # 点击并进入悖论迷宫
@@ -105,6 +110,8 @@ class TrailTaskApp:
         self.click_until_found(Setting.START_BUTTON, ImageTemplates.START_BUTTON, "START_BUTTON")
         while self.get_image_position(Setting.QUIT_BUTTON, ImageTemplates.QUIT_BUTTON) is None:
             self.battle()
+            if not WindowUtil.is_scroll_lock_on():
+                break
         self.click_until_found(Setting.QUIT_BUTTON, ImageTemplates.QUIT_BUTTON, "QUIT_BUTTON")
 
     def battle(self):
@@ -117,6 +124,8 @@ class TrailTaskApp:
             # 检测到任务完成
             if self.get_image_position(Setting.QUIT_BUTTON, ImageTemplates.QUIT_BUTTON) is not None:
                 return
+            if not WindowUtil.is_scroll_lock_on():
+                break
         x, y = self.center_to_client_pos(confirmButtonCenter, Setting.CONFIRM_BUFF_BUTTON)
         KeyboardUtil.click_mouse(self.hwnd, x, y - 500)
         sleep(1)
@@ -127,7 +136,12 @@ class TrailTaskApp:
             x, y = self.center_to_client_pos(buffSlotCenter, Setting.BUFF_SLOT)
             KeyboardUtil.click_mouse(self.hwnd, x, y)
             sleep(0.5)
-            self.click_until_found(Setting.BUFF_SLOT_CONFIRM, ImageTemplates.BUFF_SLOT_CONFIRM)
+            try:
+                self.click_until_found(Setting.BUFF_SLOT_CONFIRM, ImageTemplates.BUFF_SLOT_CONFIRM)
+            except TimeoutError as e:
+                logging.info("Buff slot confirm click timeout")
+                self.click_until_found(Setting.BUFF_SLOT_CANCEL, ImageTemplates.BUFF_SLOT_CANCEL)
+                self.click_until_found(Setting.CONFIRM_CANCEL_BUTTON, ImageTemplates.CONFIRM_CANCEL_BUTTON)
 
     def run(self):
         self.setup()

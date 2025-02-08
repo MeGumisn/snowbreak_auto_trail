@@ -28,8 +28,12 @@ CONFIRM_BUFF_BUTTON = make_setting(750, 980, 450, 120)
 BUFF_SLOT = make_setting(1170, 275, 570, 555)
 # 确认单人buff 按钮
 BUFF_SLOT_CONFIRM = make_setting(1400, 985, 355, 100)
+# 丢弃单人buff 按钮
+BUFF_SLOT_CANCEL = make_setting(100, 985, 355, 100)
+# 确认丢弃BUFF按钮
+CONFIRM_CANCEL_BUTTON = make_setting(1275,750,415,130)
 # 退出按钮
-QUIT_BUTTON = make_setting(790, 970, 330, 120)
+QUIT_BUTTON = make_setting(790, 970, 430, 120)
 
 
 class ImageTemplates:
@@ -52,5 +56,9 @@ class ImageTemplates:
     BUFF_SLOT = read_img("templates/BuffSlot.png")
     # 确认单人buff 按钮
     BUFF_SLOT_CONFIRM = read_img("templates/BuffSlotConfirm.png")
+    # 丢弃单人buff 按钮
+    BUFF_SLOT_CANCEL = read_img("templates/BuffSlotCancel.png")
+    # 确认丢弃BUFF按钮
+    CONFIRM_CANCEL_BUTTON = read_img("templates/ConfirmCancelButton.png")
     # 退出按钮
     QUIT_BUTTON = read_img("templates/QuitButton.png")

@@ -68,7 +68,7 @@
  [],
  False,
  False,
- 1739034140,
+ 1739040186,
  [('run.exe',
    'G:\\PycharmProjects\\snowbreak_auto_trail\\.venv\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],

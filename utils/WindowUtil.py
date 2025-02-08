@@ -23,4 +23,4 @@ class WindowUtil:
 
     @staticmethod
     def is_scroll_lock_on():
-        return win32api.GetKeyState(win32con.VK_SCROLL) & 0x0001
+        return win32api.GetKeyState(win32con.VK_SCROLL) & 0x0001 == 1
