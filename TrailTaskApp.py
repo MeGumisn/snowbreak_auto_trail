@@ -57,7 +57,7 @@ class TrailTaskApp:
         center_x, center_y = center_point
         return center_x + capture_setting['left'], center_y + capture_setting['top']
 
-    def click_until_found(self, capture_setting, template, name="", timeout=60):
+    def click_until_found(self, capture_setting, template, name="", timeout=10):
         start_time = time.time()
         while True:
             logging.info(f"Click until found {name}")
