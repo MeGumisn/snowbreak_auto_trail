@@ -1,3 +1,4 @@
+import base64
 import ctypes
 from ctypes import *
 
@@ -7,10 +8,10 @@ import win32gui
 
 
 class DxgiCapture(object):
-    def __init__(self, hwnd):
+    def __init__(self, hwnd, dxgi):
         self.hwnd = hwnd
         # 后续存放图片数据
-        self.dxgi = ctypes.windll.LoadLibrary("./dxgi4py.dll")
+        self.dxgi = dxgi
         self.dxgi.grab.argtypes = (POINTER(ctypes.c_ubyte), ctypes.c_int, c_int, c_int, c_int)
         self.dxgi.grab.restype = POINTER(c_ubyte)
         self.dxgi.init_dxgi(self.hwnd)
@@ -27,6 +28,13 @@ class DxgiCapture(object):
         img = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
         return img
 
-    def grab_gray(self,capture_settings: dict[str, int]):
+    def grab_gray(self, capture_settings: dict[str, int]):
         img = self.grab(capture_settings)
         return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    def grab_window(self, quality=75):
+        rect = win32gui.GetWindowRect(self.hwnd)
+        img = self.grab({'left': 0, 'top': 0, 'width': rect[2] - rect[0], 'height': rect[3] - rect[1]})
+        _, buffer = cv2.imencode('.webp', img,
+                                 [cv2.IMWRITE_WEBP_QUALITY, quality])
+        return base64.b64encode(buffer).decode('utf-8')

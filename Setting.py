@@ -16,7 +16,8 @@ MAZE_BUTTON = make_setting(1450, 230, 415, 150)
 # 验证战场按钮
 BATTLE_GROUND = make_setting(10, 140, 300, 120)
 # 增益试炼按钮
-TRAIL_BUTTON = make_setting(1515, 910, 410, 200)
+# TRAIL_BUTTON_old = make_setting(1515, 910, 410, 200)
+TRAIL_BUTTON = make_setting(735, 480, 430, 240)
 # 试炼循环
 # 厄险关卡按钮
 EXTREME_TRAIL = make_setting(1380, 275, 300, 130)

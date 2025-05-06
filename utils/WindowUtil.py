@@ -4,6 +4,7 @@ import win32gui
 
 
 class WindowUtil:
+    STOP = False
     @staticmethod
     def enumerate_visible_windows():
         windows = {}  # 用于存储窗口标题和句柄的字典
@@ -23,4 +24,11 @@ class WindowUtil:
 
     @staticmethod
     def is_scroll_lock_on():
-        return win32api.GetKeyState(win32con.VK_SCROLL) & 0x0001 == 1
+        return (win32api.GetKeyState(win32con.VK_SCROLL) & 0x0001) != 0
+
+    @staticmethod
+    def is_task_running():
+        # 检测scroll lock是否关闭
+        return WindowUtil.is_scroll_lock_on()
+        # return WindowUtil.STOP
+

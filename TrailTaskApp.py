@@ -26,9 +26,9 @@ logging.basicConfig(
 
 class TrailTaskApp:
 
-    def __init__(self, hwnd):
+    def __init__(self, hwnd, dxgi):
         self.hwnd = hwnd
-        self.capture = DxgiCapture(hwnd)
+        self.capture = DxgiCapture(hwnd, dxgi)
 
     def check_match_templates(self, grayImg: cv2.Mat, grayTemplateImg: cv2.Mat):
         res = cv2.matchTemplate(grayImg, grayTemplateImg, cv2.TM_CCOEFF_NORMED)
@@ -74,9 +74,9 @@ class TrailTaskApp:
                     return
                 if time.time() - start_time > timeout:
                     raise TimeoutError("Failed to find the target image within the timeout period.")
-                if not WindowUtil.is_scroll_lock_on():
+                if not WindowUtil.is_task_running():
                     break
-            if not WindowUtil.is_scroll_lock_on():
+            if not WindowUtil.is_task_running():
                 break
             sleep(1)
 
@@ -91,7 +91,7 @@ class TrailTaskApp:
 
     def setup(self):
         self.back_to_home()
-        if not WindowUtil.is_scroll_lock_on():
+        if not WindowUtil.is_task_running():
             return
         # 点击主页面上的“战斗”按钮
         self.click_until_found(Setting.HOME_PAGE, ImageTemplates.HOME_PAGE, "HOME_PAGE")
@@ -108,15 +108,19 @@ class TrailTaskApp:
         self.click_until_found(Setting.EXTREME_TRAIL, ImageTemplates.EXTREME_TRAIL, "EXTREME_TRAIL")
         # 点击开始作战按钮
         self.click_until_found(Setting.START_BUTTON, ImageTemplates.START_BUTTON, "START_BUTTON")
+        sleep(5)
+        for i in range(5):
+            KeyboardUtil.press_key(self.hwnd, win32api.VkKeyScan('W') & 0xFF, 0.3)
         while self.get_image_position(Setting.QUIT_BUTTON, ImageTemplates.QUIT_BUTTON) is None:
             self.battle()
-            if not WindowUtil.is_scroll_lock_on():
+            if not WindowUtil.is_task_running():
                 break
         self.click_until_found(Setting.QUIT_BUTTON, ImageTemplates.QUIT_BUTTON, "QUIT_BUTTON")
 
     def battle(self):
         confirmButtonCenter = self.get_image_position(Setting.CONFIRM_BUFF_BUTTON, ImageTemplates.CONFIRM_BUFF_BUTTON)
         while confirmButtonCenter is None:
+            KeyboardUtil.press_key(self.hwnd, win32api.VkKeyScan('C') & 0xFF)
             KeyboardUtil.press_key(self.hwnd, win32api.VkKeyScan('E') & 0xFF)
             sleep(1)
             confirmButtonCenter = self.get_image_position(Setting.CONFIRM_BUFF_BUTTON,
@@ -124,7 +128,7 @@ class TrailTaskApp:
             # 检测到任务完成
             if self.get_image_position(Setting.QUIT_BUTTON, ImageTemplates.QUIT_BUTTON) is not None:
                 return
-            if not WindowUtil.is_scroll_lock_on():
+            if not WindowUtil.is_task_running():
                 break
         x, y = self.center_to_client_pos(confirmButtonCenter, Setting.CONFIRM_BUFF_BUTTON)
         KeyboardUtil.click_mouse(self.hwnd, x, y - 500)
@@ -146,13 +150,13 @@ class TrailTaskApp:
     def run(self):
         self.setup()
         while True:
-            if WindowUtil.is_scroll_lock_on():
+            if WindowUtil.is_task_running():
                 self.start()
             else:
                 logging.info("Scroll lock is off")
                 self.setup()
                 pauseTime = time.time()
-                while not WindowUtil.is_scroll_lock_on():
+                while not WindowUtil.is_task_running():
                     if time.time() - pauseTime > 60:
                         logging.info("Scroll lock is off")
                     sleep(3)
@@ -161,5 +165,9 @@ class TrailTaskApp:
 if __name__ == '__main__':
     ctypes.windll.user32.SetProcessDPIAware()
     hwndMap = WindowUtil.enumerate_visible_windows()
-    taskApp = TrailTaskApp(hwndMap['尘白禁区'])
+    dxgi = ctypes.windll.LoadLibrary("./dxgi4py.dll")
+    taskApp = TrailTaskApp(hwndMap['尘白禁区'], dxgi)
+    # print(taskApp.capture.grab_window())
+    # WindowUtil.STOP = False
+    # taskApp.click_until_found(Setting.TRAIL_BUTTON, ImageTemplates.TRAIL_BUTTON, "TRAIL_BUTTON")
     taskApp.run()

@@ -38,9 +38,19 @@ class KeyboardUtil:
             win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, screen_x, screen_y, 0, 0)
 
     @staticmethod
-    def press_key(hwnd, key_code):
+    def press_key(hwnd, key_code, delay=0.03):
         # 发送按键按下消息
         win32gui.SendMessage(hwnd, win32con.WM_KEYDOWN, key_code, 0)
-        sleep(0.03)
+        sleep(delay)
         # 发送按键释放消息
         win32gui.SendMessage(hwnd, win32con.WM_KEYUP, key_code, 0)
+
+    @staticmethod
+    def press_alt_3(hwnd):
+        # 按下alt键
+        win32gui.SendMessage(hwnd, win32con.WM_KEYDOWN, win32con.VK_MENU, 0)
+        # 按下主键盘3
+        win32gui.SendMessage(hwnd, win32con.WM_KEYDOWN, ord('3'), 0)
+        sleep(0.03)
+        win32gui.SendMessage(hwnd, win32con.WM_KEYUP, win32con.VK_MENU, 0)
+        win32gui.SendMessage(hwnd, win32con.WM_KEYUP, ord('3'), 0)
